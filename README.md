@@ -1,1 +1,1 @@
-# Flask_project
+# Flask simple Inventory 
