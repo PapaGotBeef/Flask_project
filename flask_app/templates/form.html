@@ -1,0 +1,21 @@
+{% extends "boot.html" %}
+   
+{%block content%}
+<div class = 'container justify-content-center' >
+<form method='POST' action="{{url_for('add_record')}}">
+       
+    <h2>Contact Form</h2>
+        Name<br>
+        <input type='text' name='nm'/><br>
+        ID<br>
+        <input type='text' name='id'/><br>
+        Price<br>
+        <input type='text' name='pc'/><br>
+        Description<br>
+        <input type='text' name='ds'/><br>
+        Quantity<br>
+        <input type='text' name='qty'/><br>
+        <input type="submit" class="btn btn-success" value='submit'>
+    </form>
+    </div>
+{%endblock%}

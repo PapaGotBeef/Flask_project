@@ -1,0 +1,37 @@
+{% extends "bootstrap/base.html" %}
+{%block styles%}
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+{%endblock%}
+{%block scripts%}
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+{%endblock%}
+{%block navbar%}
+<nav class="navbar navbar-expand-lg navbar-light bg-warning border-danger">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="{{url_for('greetings')}}">Home</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="{{url_for('contact_form')}}">Add Item</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{{url_for('list_data')}}">Stock<Table></Table></a>
+          </li>
+         
+       
+      </div>
+    </div>
+  </nav>
+
+{%endblock%}
+{% block title %}Testin Page{%endblock%}
+
+{%block content%}
+
+
+{%endblock%}
