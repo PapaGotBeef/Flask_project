@@ -3,7 +3,7 @@ from flask import render_template
 from flask import request
 import sqlite3 as sql
 from flask_bootstrap import Bootstrap
-app = Flask(__name__)
+app = Flask(__name__, static_folder="static")
 bootstrap = Bootstrap(app)
 @app.route('/stock')
 def list_data():
@@ -34,6 +34,7 @@ def add_record():
         price = request.form['pc']
         description = request.form['ds']
         qty = request.form['qty']
+        
         with sql.connect('inv.db') as conn:
             cur = conn.cursor()
             cur.execute("INSERT INTO Stock (name,id,price,description,qty) VALUES (?,?,?,?,?)", [name,id,price,description,qty])
